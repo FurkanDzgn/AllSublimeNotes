@@ -1,0 +1,119 @@
+ SQL (Structured Query Language)
+ Database -> is collection of data which is stored as tables
+ * SQL is command that is sent to database
+ * Database store inside cloud which is a server.
+ * That one language manipulate the database
+
+Why companies need Database?
+ 1. Big data -> it is organized in format of tables
+ 2. Security ->
+ 3. Accessible from everywhere
+ 4. Easy to manipulate -> easy to reach and change easily
+
+Two types of database:
+ 1. Relational Database -> Once tables are related to each other
+     ORACLE SQL, MySQl, Mari DB...
+     Small Applications
+     Tables (format)
+
+ 2. Non-Relational Database -> tables don't have relationship/ table are independent from each other.
+     Big Enterprise applications which is build with the help of Microservices.
+     Mongo DB, Cosmos DB, Cassandra DB...
+     Tables (format)
+     Json (format)
+
+Fake Data -> Mock Data
+
+They don't give us real data, every environment has their data
+Environment:
+dev, qa, sit, e2e, stag, prod
+
+Primary Key -> Uniquely identified rows, values has to be unique
+Foreign Key -> can have duplicate values, and it is reference for other tables primary key
+
+How do you prepare test data?
+
+Who prepares test data?
+  Developers might do it
+  I am preparing the test data
+  API POST call, go to ui and create
+
+
+DBA -> Databse Administrators
+
+Access to Database:
+------------------
+ qa environment access
+ r  -> read access
+ wr -> write access
+
+How we can work/ commnicate database?
+
+----
+
+Download SQL -> Copy jdk path paste SQL -> create a connection manually
+
+https://download.oracle.com/oll/tutorials/DBXETutorial/html/module2/les02_load_data_sql.htm
+
+-------------------------------------------
+2. day
+
+Write a query that will display first_name,salry,hire_date,job_id
+for those employees who works in department id 50 and was hired after
+1999.Sort the data by salary and employee_id
+
+---------------
+
+ API POST CALL
+{
+	first_name: "Arslan",
+	last_name: "K",
+	username: "ak",
+	password: "12345"
+}
+
+It will create data in database
+
+select first_name, last_name,username,passworf
+from customers;
+
+Arslan ->
+K -> k
+
+or you will test API GET call
+
+GET -> https://qa.amazon.com/customers/ak
+
+{
+	first_name: "Arslan",
+	last_name: "K",
+	username: "ak",
+	password: "12345"
+}
+
+
+There are two types of SQL functions, aggregate functions, and scalar(non-aggregate) functions. Aggregate functions operate on many records and produce a summary, works with GROUP BY whereas non-aggregate functions operate on each record independently.
+
+duzgundatabase.cxc573ikkvq4.us-east-2.rds.amazonaws.com
+
+------------------------------------------
+
+Maven
+we have artifactory it provides from dev ops team or companies requirements
+All the dependencies from m2 file
+* dependencies go to the mvnrepository an download and save in m2 file
+
+- jar file is java files   / JAR = Jave ARchive file. it is Java equivalent of the zip file.
+
+JDBC - stands for (Java Database connectivity)
+
+
+every two weeks mock data delete/clean from devOps team
+
+Dependency to read Microsoft Excel file -> Apache POI
+
+JDBC Interview questions?
+ 1) What interface do you use to make connection with database?
+   - Connection, Statement, ResultSet
+ 2) Who creates test data?
+ My responsibility is create a test data?

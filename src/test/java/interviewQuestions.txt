@@ -1,0 +1,220 @@
+Interview Questions
+ 0- Tell me about yourself?
+    * I am currently on a QA tester on my Team
+    * I am proficient about java,Automation Testing tools which are Selenium Webdriver, TestNG, Cucumber, JUnit, Maven,Also I am confident about Backend testing tools Apache HttpClient libraray, RestAssured Library, Postman,
+      Appium, Jira, Jenkins, Git, Github
+    * I can create a framwork from scratch with BDD, TDD styles
+    * I am higly confident in various testing types Which are functional, regression, smoke, end to end testing
+    * I am working my current project with agile methodlogy
+    * Team working and collaboration
+    * Currently looking for a new career opportunity to work in a progressive and challenging environment with an innovative company
+    * I am working my current project with agile methdology
+    * I am using pom(Page Object Model) and pom(Project Object Model) on my framework
+    * I am testing regirster patient in current project. I choose correct/wrong userName and password.Validate message.I have 6 seperate options
+      i am working on Registration Desk Button at login page.Main Page has 11 options.I am working on 'Regeister a Patient' button.I register new
+      patient with data Scnenario Outline/ example. I register multiple patient only one scneario.Once I create a patient. I am testing all negative
+      scneario all boxes.And validate messages.When I create a message i am doing the end to end testing i took patient info which i already created
+      , doing verification with JUnit.And The page has 'General Actions' table,There are two different options oen of them is 'Edit Registration information' and 'Delete Patient' button.I delete patient and validate taking info from front-end and back-end and validate with JUnit.And click 'Edit Registration information' button and edit patient information with postove and negative testing and assertion with JUnit.
+
+ 0a- what is your resbonsibilities?
+    *
+   - Writing test cases
+   - Analyzing the requirements
+   - Writing automation code
+   - Manual Testing
+   - Smoke Testing
+   - Regression Testing
+   - Check Emails
+   - Attend Scrum meetings
+   - Creating a bug - ticket in Jira(PO) / we don't create Jira ticket just PO create
+
+  Not Your Responsibilities:
+   - Creating JIRA user story ticket
+   - You don't have to the Developer's code.
+   - Unit testing (white box testing)
+   - Performance Testing
+   - Scheduling job in Jenkins
+
+
+ 1- What is the difference between Object and Class?
+    - A Class is a user defined blueprint or prototype from which Objects are created
+
+ 2- What is the isA and hasA ?
+    - SubClass is-A Parent Class
+    - SubClass has-A Parent Class instance variables and methods
+
+ 3- Final,Finally,Finalize?
+    - Final is keyword
+       * final variables/ methods/ class
+      Finally is a block
+        * The finally block always executes when the try block exits.
+      Finalize is a method
+        * Garbage Collacotor. / Remove old and useless data
+ 4- Jdk,Jre,Jvm?
+    Jdk -> is needed for developing java applications.
+    Jre -> is a plug-in needed for running java programs.
+    Jvm -> WORA / SourceCode -> ByteCode -> BinaryCode
+ 5- How is your approaching the test?
+
+ public void setUp() throws MalformedURLException { // declare exception
+
+
+                                                       // try and catch -->> handle exception
+ out of 10
+ 6- Why u r looking a new job?
+   i've already learned a lot from my current company and i wanna grow and try something new
+
+I feel like this position would be perfect fit for me
+
+i'm confident, i never put limitation in my ambitions , i'm open for new challenges , i like to learn something new that i've never done before, i'm open to take more responsibilities . if you ask me,  do i see myself as a CEO or BA , clearly yes.
+
+in order not to stressed out i prioritize the work
+
+Actually, with stress or pressure, I do my best job. I need good stress to stay motivated, productive, and enthusiastic.
+
+Acceptance Criteria/User Stories -> PO
+Test Cases -> Tester
+
+
+7- Purpose of logs ?
+  - Logs -> is our console, execution result
+  - Help us debug the issues that you may have with application
+  - sometimes when a bug is found in application, developers firstly check the logs. Inorder to see which steps the user was
+  taking and application did not behave as expected
+  - Logs MAY help you find the source of the problem (in application perspective, not testing)
+  -
+
+8- What is .m2 folder?
+  - where your jar files/ repositories are saved in your computer
+
+
+every 5-6 sprints = PI
+
+9- What was your contribution for your team or company?
+  -
+
+10- What is the difference between java and javaScript?
+   - https://www.tutorialspoint.com/What-is-the-difference-between-Java-and-JavaScript#:~:text=Java%20applications%20are%20run%20in,is%20an%20OOP%20programming%20language.
+
+11- Why u change your company?
+   -
+
+12- What is your biggest accomplishment?
+   -
+13- What is strenght and weakness?
+   -
+
+
+
+14- Which API u test?
+
+15- How many API u have?
+   - 1 endpoint to get to token
+   - 1 to get the auhorization to login to page
+   - 1 getsummary it will return hospital performance summary data
+   - 1 historical data I can use this api for x report, y report, z report
+   - 1 domain perf data
+
+==========================
+
+Pizza Delivery application
+ If the distance less than 10 mile the price of the delivery is $10
+ If there is any stair for this location the price of the delivery is $15
+ If the mile is more than 10 mile regardless of the stairs the price of the delivery is $25
+
+ -------------------------------
+
+ * what if the distance is exactly equals to the 10 mil.
+ * what is limitation for distance.
+ * what is the limitation for number of the pizza.
+
+ ----------------------
+
+ 16- How many environments u have?
+    - dev, test, sit, uat, staging(pre-production/ we need to be sure app is working), production
+
+     16 QA is working
+
+     dev.openmrs.com
+
+     Nirvana - Thundercat
+
+     test.openmrs.com ( scrum team (4 scrum team) was testing in test env)
+     sit.openmrs.com (sit(system integration testing) team was testing in this env.)
+     uat.open  --> there was another team
+     st.openmrs.com
+     openmrs.com
+
+17-  How many test cases u have?
+   450 for Ui  -> 35 min in 4 different VM
+   450 for Api -> 30 min in 2 different VM
+
+   How we do paralel testing with Cucumber?
+   Yes we did paralel testing I did't setUp
+
+18- How often you release?
+    - every 3 sprint
+
+
+    - regression test takes 30 / 35 min
+=================================
+19- How do u estimate userStory?
+
+   Team Capacity(avalibality) and Team Velocity (In Sprint Planning)
+    *Team Capacity: number of the point the team can handle totally
+      5 point for one person and we have 3 developer 1 tester total capacity of the team is 20 point
+      1 point equal to 1 day means 6 hours
+
+    *Team Velocity: number of the point the team can deliver in one sprint
+      We will tahe a look last 4 sprint,the team handled how many point
+      17 - because 1 person take off 3 days
+      16 - two person take off 2 days
+      19
+      20
+      next sprint our team velocity is 18 point.
+======================================
+1- Current Visit Actions for openmrs
+  * end visit   --> 2 (point) dev + 1 test total 3
+  * attachment  --> 1
+  * visit notes --> 2
+5 point
+
+2- Another user story to test only this functionality
+3 point
+
+Which languages u know?
+ - Java, SQL, HTML, XML
+ ------------------------------------
+ Java-InterviewQuestions
+
+ 1- What is the difference between Object and Class?
+    - A Class is a user defined blueprint or prototype from which Objects are created
+
+ 2- What is the isA and hasA ?
+    - SubClass is-A Parent Class
+    - SubClass has-A Parent Class instance variables and methods
+
+ 3- Final,Finally,Finalize?
+     - Final is keyword
+       * final variables/ methods/ class
+     - Finally is a block
+       * The finally block always executes when the try block exits.
+     - Finalize is a method
+       * Garbage Collacotor. / Remove old and useless data
+ 4- Jdk,Jre,Jvm?
+     Jdk -> is needed for developing java applications.write a code and execute the code
+     Jre -> is a plug-in needed for running java programs.
+     Jvm -> WORA / SourceCode -> ByteCode -> BinaryCode
+ 5- How is your approaching the test?
+
+ 6- public void setUp() throws MalformedURLException { // declare exception
+                                                       // try and catch -->> handle exception
+
+ 7- What is the difference between java and javaScript?
+    - https://www.tutorialspoint.com/What-is-the-difference-between-Java-and-JavaScript#:~:text=Java%20applications%20are%20run%20in,is%20an%20OOP%20programming%20language.
+
+ 8- How to convert Array to list and reverse?
+    (LitsName).toArray(); -> convert from list to array
+    Arrays.asList(ArrayName);
+
+

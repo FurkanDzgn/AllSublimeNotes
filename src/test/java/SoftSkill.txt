@@ -1,0 +1,493 @@
+Soft-Skill
+
+1.Objectives of testing
+2.QA vs Testing
+
+3.
+ERROR
+DEFECT
+BUG
+Failure -> build doesn't meet requirement.If the bug found by end user then it's failure
+
+A mistake in coding is called Error, error found by tester is called Defect, defect accepted by development team then it is called Bug,
+
+4.Causes of defects
+5.Root cause analysis
+6.Priority vs Severity
+7.Testing Principles
+
+What is testing?
+Why testing
+What can the bug cause?
+Shift left testing?
+Boundary analysis?
+
+Report a Bug:
+    -meaningful description
+    -steps to reproduce
+    -screenshot
+    -video
+    -browser,platform
+    -version of app(website, mobile app)
+    -enviroment:
+        test env(test1, test2, test3)
+        dev env(dev1, dev2, dev3)
+        stg env(stg1, stg2, stg3)
+        prd env
+    -report
+    -severity(how much effect this bug has on the application)
+
+Code freeze - no more changes to the code is possible to make
+
+Risk of a bug going to PRODUCTION:
+- loss of time
+- loss of money
+- loss of company brand, reputation
+- risk for injury or life
+
+Comply with law/legal
+
+Error vs Defect vs Bug
+Error - error found in code by developer
+Defect - eror found by tester
+Bug - error found by tester and accepted by developers
+Failure - error found by end-user in production
+
+Root cause analysis:
+ id done to prevent such failures in future and improve the process.
+
+ Butterfly effect
+
+ ============================
+
+Smoke test- is a test that ensures that the most important functions are working
+
+Smoke Test is a type of test that checks if application is up and running, test most major functionalities
+
+
+06/03/2020
+Agenda:
+1. Anouncement ---------TA-DA------
+2. TEST ARTIFACTS: ?
+3. Final Domains picked and discussed
+                (What is a Smoke Test?)
+SMOKE TESTING, also known as “Build Verification Testing”, is a type of software testing that comprises of a non-exhaustive set of tests that aim at ensuring that the most important functions work. The result of this testing is used to decide if a build is stable enough to proceed with further testing.
+- Sanity Check
+Qs:
+1. When you joined the Project, what types of issues or difficulties you faced?
+2. What do you expect from your Scrum Team?
+3. On a scale from 0 to 10,  how good are you in Selenium? why?
+4. What type of testing do you perform?
+5. How many test scripts do you have in your Smoke Test?
+The easiest Interview ---- GRILLING interview
+The test scenarios: search box
+1. Verify if the Searchbox is clickable
+2. Verify if the user is able to type of the search box
+3. Verify if the system is finding the city  after the input of 3 letters
+Test Case in JIRA -
+Test Case ID - TCEVF001
+Test Case  - Verify if the Searchbox is clickable
+Test Case Description - " "
+Test Case Result : Expected/ Actuality
+ User is able to click on the Search Box, so that he/she can search for the tickets ""
+Test Case steps:
+The Status: Passed/ Failed
+
+====================================================
+
+SDLC PHASES
+
+--
+
+WaterFall vs Agile
+
+The Waterfall Methodology
+
+Waterfall isa linara approach to software development
+----------
+
+Agile methodology
+--> like life ciycle
+* sprint 2 weeks
+* total 10 weeks
+
+
+
+
+scrum master -> moderator
+PO/BA -> is not technical guy , knows requirements , is a bridge between client and devTeam
+PM --> technical guy
+
+
+============================
+
+smoke testing
+regression testing
+functional testing  -->> check functions on website
+end to end testing  -->>
+
+Object Repository -->> Properties file, xml file
+
+1.TELL ME HOW DO YOU FIND WEB ELEMENT? YOUR Favorite OPTION?
+2. in your company what testing types are you doing with selenium?
+3. Assertion types
+4. List out the technical challenges with Selenium?
+5.What is the difference between verify and assert commands? (hard assertion and soft assertion)
+6. Waits
+7. How you can use “submit” a form using Selenium ?
+8.Explain what is the difference between find elements () and find element ()?
+9.Datadriven framework and Keyword driven?
+10.Explain how to assert text of webpage using selenium
+11.Do you use double click method in Selenium a lot?
+12. Explain how you can handle frames using Selenium
+13. what is Listeners in Selenium WebDriver? It allows customizing TestNG reports or logs. There are two main listeners i.e. WebDriver Listeners and TestNG Listeners (edited)
+
+positive and negative test is important we need both of them
+
+
+
+
+impedimnets == blockers
+
+PI Objectives -->> a summary of businiess and technical goals of an agile team
+
+
+Smoke Testing - the type of testing where the QA tests the main Functionalities and the most critical funcyionalities of the AUT.
+
+Unit testing -->> mostly developers, maybe Tester can help
+
+AUT -->> application under test
+
+
+Smoke,Regression,Systme, Unit ,
+
+error in console -->> when there is an error in your console
+
+defect -->> when the expected and actual does not match each other
+
+What is difference between bug and defect? -->> interview questions
+  A mistake in coding is called Error, error found by tester is called Defect, defect accepted by development team then it is called Bug, build does not meet the requirements then it Is Failure.”
+
+review, design, code, implement, validate, execute -->> testing steps
+
+Regression, Smoke, functional, API, database -->> tests can be automated
+
+
+
+
+Iniative/product/Service                         Epic
+(Instant messgaing service)
+
+
+Theme->Epic->US?
+
+
+=========================================================================
+
+stackHolder
+   * user
+
+Other Teams
+ * Help Desk
+ * Business/Product Team -->> PO
+ * Release Management Team ->regulation->integration
+     * Responsible for planning,coordinating,and verifying the deployment of IT products into production
+     * Collaborates with all the IT development team(s)
+     * Produces the solutions and the people responsible for
+ * Data Base team
+ * Infrastructure Team
+ * Operations Team
+ * DevOps Team
+    * Development + Operations
+    *
+ * Archtect Team
+ ------------
+
+ Tech Debt  Stories/Clean Up Stories
+
+ ================================================================================
+
+All scrum ceremonies:
+ * Sprint grooming, planning, daily stand up and demo
+
+=================================================================================
+
+SDET = SET
+
+SDET is Customer Advocate
+
+Agile Ceremony
+ * Sprint -->>
+ * Daily Scrum/Stand Up Meeting
+     - What have u done yesterday?
+     - Wht have u doing yesterday?
+     - Do u find a bug? / any impediments
+ * Sprint/Backlog Grooming
+     - ALways before planning
+         GROOM                      PLAN
+         Just taking and           Points
+         Thing about it
+         Grooming next sprint planning
+ * Sprint Demo/Review
+      - Feedback
+ * Sprint Retrospective
+      - review each other(teammates)/ only your team
+   1st Version
+    PRO
+    Delta
+    Action Item
+   2nd Version
+    Start
+    Stop
+    Continue
+ * Sprint Planning
+
+
+ Backlog(All this Functionalities)
+1 A Login 8
+2 B Balance 13       -->>   Sprint Backlog (40 Points)
+3 C Withdraw 21              A-8                          -->> ATM
+4 D Deposit Bitcoin 5                B-13
+5 E Send 3                   C-21 (It shouldn't be more than 40)
+6 F Deposit Cash
+7 G Create User
+8 H
+9 I
+10J
+
+7 needs go 1 one
+6 and 4 needs to exchange(prioritze)
+
+
+sudo rm -rf -->>> deleted java version
+
+=============================================================
+
+Story Pointing system
+
+Capacity:                              Velocity:
+1 Sprint/ Current Sprint               Avarage
+  20P                                  (20+25+35+20)/4=25
+  25P
+  35P
+  20P
+
+Pointing in Scrum
+ Commnaly used Pointing scale types:
+     * 1,2,4,8,16
+     * T-shirt sizing
+     * Fibanocci sequence
+
+ Hours:
+ Day
+  8           ->1 Point
+  5(Popular)
+  3
+
+One sprint -> 2 Weeks -> 1 point is 5 hour -> 10(members) * 8(days) * 5(hours) = 400
+
+
+Product Backlog            Sprint Backlog
+
+-----
+
+Company Enviroments
+  LOCAL:
+    -> Local Enviroment, local machine
+  QA:
+    -> QA Enviroment
+  UAT:
+
+  PROD:
+
+
+QA -> Staging -> Prod
+
+
+============================================================================================
+
+10. Common interview questions:
+
+ - Regression suite. How big is your regression suite?
+ - How many test cases UI based or Rest, DB based?
+ - How long does it takes to execute regression suite?
+ - Can you tell me about one automation challenge you faced and how did you resolve the problem?
+ - Can you tell me about your reporting structure? How do you organize your reports?
+    - meaningful description
+  - steps to reproduce
+  - screenshot
+  - video
+  - browser, platform
+  - version of app (website, mobile app)
+  - environment:
+    test env (test1, test2, test3)
+    dev env (dev1, dev2, dev3)
+    stg env (stg1, stg2, stg3)
+    prd env
+  - report
+  - severity (how much effect this bug has on the application)
+
+- Page Object Model and Project Object Model?
+                        * pom.xml
+                        * we store our dependencies and plugins
+Page Object Model, also known as POM is a design pattern in Selenium that creates an object repository for storing all web elements. It is useful in reducing code duplication and improves test case maintenance. In Page Object Model, consider each web page of an application as a class file
+
+ - Can you tell me about your POJO's?
+
+ - How many environments you have in your company?
+   * we have 4
+     in my company
+     dev qa preprod and prod
+
+=======================================================================
+
+Appreciate that they are having me... come up with unique idea of thanking interviewers
+
+2. Tell me about yourself?
+  I can use/learn any tools/languages as long as it works.
+  Start with passion I love it so much it is part of me, I developed in my career so many types of applications, different world's, different purposes, talk about my achievments, add numbers, ppl who used it when we released, users said that we automated their stuff 38%. We have screens and tvs which helps us to check our environment, which shows our reports in visual base. In my company I learned how to collaborate, how to talk, how diversity works.
+
+3. Ask questions, why you guys hiring, what are you trying to achieve, are you expending before going to interview.
+
+4. Why should we hire you? -> talk about optimizing coding, BDD style with cucumber. Research the company and give what they want.
+
+5. Why/How did you end up with this world? -> Do you have a time? It will take a while, even I was child, I was curious how my toys worked, I used to take it a part, and tried to put it back, my friend dragg me in, so I can test things, so I took a chance/start... come up with a story. so many things to learn and apply as a tester. I was for this kind of opportunity, and talk about feelings. I like new technology and challenges. Testers mindset is different, to brake easier than creating something.
+
+6. Where do you see yourself in 5 years? -> I would like to code like a developer, and keep improving my testing skills and learn more tools, it is expending more. There is always testers will be in need, because anything should be tested. I love it that is number one thing. there is security testing, I would test the volume. and those things need time.
+
+7. never say that I found with team, never say negative stuff. I don't take things personally, because our goal is to reach something, we are working on the same issue. Actions that I take -> if their is argument -> create a meeting with teammates, present. Meetings so everyone has a chance to justify ourselves.
+
+8. What was your contribution? -> 80% of time we spent at work, what I achieved last time, before I came to my team , there was a gap b/w devs and qa, but now working together changed things and relationship. we communicate and ask what will help each other see how test and development is effecting our lives. in this case we have less production issues, we have less hot fixes before production. I took over debugging things, I would spend my time and identify what is the issue with screenshot, so my dev team appreciates the time I spent so they can fix things faster and don't go over it themselves. making faster of creation of framework
+
+9. Before testing I would come up with requirements, acceptance criteria, if it is new, then check other top 5 best "pen" and write our own requirements and documentation for myself, and then for others, for report, it's functionality. #1 thing is documentation, otherwise, it will be endless, requirements show it's limits, and my test structure, I cover/protect myself.
+
+10. figure out/learn/explore a tool that I don't know, when I learn new stuff and start to implement right away.
+
+11. the challenge is I have to make sure that I'm on the same page with developers, it is achievable in API-> documentation, not in UI -> clickable webelements. I learned ..... have a goal that shows that I have to improve and achieve. I have a goal to make developers merge the code and it goes straight like through pipeline to production.
+So many things to test in regression that if you forget to test something, in production it might fail, and we have to do hot fixes.
+Microservices that we depend on, google shows as a "Germany", we have to tell to roll back because our production depends on it. never trust any third application/production, I learned things no to trust. now I included in my testing. depended services/3rd parties.
+
+12. What is your weaknesses? -> something that can be fixed.
+
+13. What is your strength? -> very detail oriented, helps in testing, as well as, in stress situation my mind works extremely focused and fast.
+
+14. did you work on different projects, if two different applications as a project then no, because it is hard to focus on ->
+
+15. evaluation of complexity of work is very important, we have 1 sprint -> 10 days, sometimes we miss it, in retrospective we come up with time, it is okay to make one mistake, not okay to make it twice. First, check and work on database first, and then work on other things. work on priorization and we will never miss the deadline. take as an eight, and if finish in 5 points, then we never waste time, we still work on other things, talk to PO in advance and ask which story he is ok to drop down and move to another sprint, mention if you don't have time to finish your test. It is fine to let people know when I underevaluate story.
+
+16. how many users story, usually do you delivering to the Demo Sprint? 10 - 15 stories, depends on the story.
+
+17. Give me an example of when you did or when you didn't agree with your team/manager -> it is a production, one of the production I cant test, I can't assign and generate invoice, because if I do, that function will charge the customer, it was passing in preproduction. There is a shortage of manual tester, my manager was asking if I can do manual testing at the same time an automation. my main focus is on an automation because I have 4 developers, I can do less automation and do more manual, -> talk about stuff that makes sense.
+
+18. Did you ever make a risky decision? Why? How did you handle it? Life is risky, every decision is risky, when I was doing performance testing, and requirements in documentation should work, I had to come up with numbers, I talked to database team, if they can check how many time users login, in rush ours, regular ours, what do you see delays.. 30 sec of delays is fine, because we were switching from old to new product, I documented, and checked if the performance testing is fine, I took a great risk if in the production it fails then I was the one who is responsible.
+
+19. Have you ever dealt with company policy you weren’t in agreement with? How? in my experience I didn't have any examples. every company should have their policies, otherwise, they wouldn't survive.
+
+20. Have you been in a situation where you didn’t have enough work to do? there is always something to do, I have to write documentation what should i follow, check their documentation -> azure devops, how to optimize my tetsing speed, how can I attach screenshots right way with error message, how automatically create a bug, instead of doing manually.
+I would like to automate test cases, but there is always things to do.
+
+21. How do you start the Test Process? everything starts with idea and requirements, how this functionality is used and try to understand, acceptance criteria are clear, we have to know what to test.
+After we can do presteps, logins and pressing couple buttons, we have to make sure that it works well. Think how should I test it with every possible scenarios.
+  i get familiarized with business requirements
+  clarify the UAC(user acceptance criteria) with PO
+  i start building the framework
+
+22. Why are you leaving your company? if job description says they are using new skills that I can learn new skills,    everything is done, technology is moving and I have to move on.
+  My contract is ending, or got laid off because of covid -> company is just wanna sustain at their level not to go bankcruptcy.
+
+23. How many test cases you wrote? -> I don't know, no one really counts it. 6-8 months ago I count it was more then 2500 all in regression, and now it is about 3000 -> all together to run in 1 hour -> API. I ran in three machine. make sure to defend and back it up. CI/CD -> talk about it.
+3000 test cases -> UI would make 12 hours.
+
+24. Do you have experience working directly with customers and their products and resolving potential issues that they may encounter? -> mostly work internally application that I worked on -> so no, but it is important to work with end users because we can ask and work on feedbacks. usually  we get feedbacks on demos. if we have (?) -> ask PO and share the screen and ask if they like it or not, what kind of functionalities they want and not..
+
+25. How do you split the tasks b/w other QA during the sprint planning? -> usually whoever knows what and according on that we can ask if that person can pick it up or not, make sure everything goes along, and we don't work on the same issue, on stand ups we discuss what we work on, talk to QA.
+
+PROJECT:
+What we are working on externally or internally
+Quote and order-> we have to be competible with others.
+3rd party for insurance datascience -> they do best 5 brockers -> that they have revenue/ loggs, shortest track -> API, calculates everything price of gas, PC mileage -> API, Quotes ->  Service Options, ST Gateway, Order, PCM Gateway, Transit Information
+it is better to work with third party because we dont know if they are corrupted and can hack our database.
+Quotes (DB) -> Server Options (DB) -> Transit Info
+                |
+                |---> ST Gateway
+                  |---> PCM Gateway
+
+How it/application was built? -> C#, .NetCore, ElasticSearch, MySQL, Microservices, Rabbit mQ, Kubernetes, Linux, Http -> RestFul API, Postman, Reddig, backer,
+              -> Azure DevOps, Repo, Pipeline -> MS, J Frog Artifactory -> we store late images, builds, and dependecies, test results, swagger, consul Hashicop.
+Functionalities -> Business functionalities, how do we transfer money, if it is API, make sure account number of sender, account number of receiver, make sure amount is matching. Binshell is very close to Java.
+I love API because I don't have to ask developers and check everything swagger.
+
+
+
+Project
+
+      Queete & Order
+
+Shortest Track (API)            Ouete                Order
+
+PC MTIER (API)                  Service Options
+
+
+1. Resume Review
+2. Interview Questions
+1. Tell me about yourself?
+First of all, I would like to thank you for giving me this opportunity and I really appreciate for your time. My name is ...
+• I have been in IT industry for more than 6 years and I am currently an SDET on my team.
+• After working in different types of industry;
+o I have gained domain knowledge in the communication, Education and Financial industries.
+o So, I have a strong understanding of SDLC, and I am familiar with both Waterfall and Agile environment o I am highly proficient in various testing types, including  functional, regression and smoke testing.
+• I started off as a manual tester and eventually became proficient in automation testing
+o I develop Automation framework from scratch. I have successfully designed and developed many “many” tests scripts by using Data driven, Behavior driven and Hybrid Frameworks.
+o I am good at core java, Selenium webdriver, Maven, Cucumber, JUnit, TestNG, Jenkins and many more tools for test automation. Mostly I prefer opensource tools. o I have used
+o GITHUB for version control, (in current company we use SVN for version control) o JENKINS for continuous integration/deployment,
+o JIRA for project management and bug tracking
+o and SQL for back-end testing
+o I have worked on API testing on my project and I used Restful, postman, and Rest Assured library o I developed Automation framework from scratch several times.
+o I have successfully designed and developed many “many” tests scripts by using Data driven, Behavior driven (BDD) and Hybrid Frameworks.
+o I developed my “testing framework” based on the POM which supports BDD.
+o Also, my framework supports Database testing using JDBC. These days I am learning and trying JOOQ. It is like writing
+real SQL queries. I don’t know if you know it, but it is amazing.
+• I certified Scrum master and Oracle Java Programmer.
+• As far as soft skill concerned, I consider myself;
+o A positive person, cross-functional team member
+o Quick learner and adaptable to changing circumstances and detail oriented.
+o as Steve Jobs said, “no matter how smart you are, you need a team of great people” and sir/madam believe me I am a
+great team player. I am a people person.
+o I can also work well individually in a team
+o I always make sure that I meet the deadline (if you'd like me to elaborate on any of that, I'd be happy to go further
+into detail.?)
+• That is pretty much about me. Thank you.
+2. Tell me about your Project?
+The project story has to be told in one sentence:
+NDA - after saying the project in one sentence:
+Try saying about your role in this project, what you have done, and what tools you have used
+for this project
+3. Project Stories:
+Try using the stories related to the internal application
+One Fiber - 2018 -2020 is still going on:
+We as a Scrum Team, develop an application that is internal (mobile) for our end-clients that Verizon engineers and contractors, who build the Fiber accross the country.
+As an SDET, i perfrom UI and Mobile Testing using: ....
+I perform Functional Testing, Manual and Automation testing, regression, smoke, i also had
+to support PROD testing every second Sprint when we had releases.
+
+=================================================================
+
+Out source
+
+Last Soft-Skill Lesson
+
+ BUG & DEFECT
+
+  + Req                          + Re Producable
+  + Acceptantance Criteria       + Check YourSelf
+  + UnExpected Result
+  + ReProduce
+  + Talk to Developer
+  + Proof of Evidence
+  + Create A Bug
+
+
+any UI action invokes corresponding API call to do the action on the database and returns the response back to the UI
+
+There will be situation where not every API call result is displayed on the UI; therefore, for sake of reliability, it would be wiser to test API calls against database!
+

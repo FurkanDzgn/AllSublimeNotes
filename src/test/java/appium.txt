@@ -1,0 +1,243 @@
+Appium
+
+  Appium is a mobile testing tool/library/software.
+  Support cross-browser testing of mobile application:
+     - Android
+     - iOS
+  It's one amo
+  Appium at its heart is a server written  in node js. The server works using a client server architecture.
+
+  Open source -> free
+    (There is no dedicated support) / all installed and running
+
+* is a freely distributed(verb - dagitilmis/ paylasilan) open source mobile application UI Testing framework
+* It offers cross-platform application testing (Just support android or ios)
+* is part of Selenium Family (it uses a lot of selenium library)
+
+Prerequisite to use APPIUM:
+       for android:
+          - Android studio/Android sdk
+          - JDK
+          - APPIUM/ Appium client
+          - NodeJS
+
+3 lines to memorize:
+Appium server must be up and running ( Appium desktop must be launched)
+Mobile device(virtual device) must be up and running
+Appium server and Mobile device should be connected each other
+
+Mac:
+   1. Open the terminal -> cd ~
+   2. cat .bash_profile/ cat .zshrc
+   3. if 2 didn't work (touch .bash_profile)
+   4.
+   5.
+   export ANDROID_HOME="/Users/UPDATE_ME/Library/Android/sdk"
+   whoami -> msi\12242
+
+
+
+
+
+   APPIUM:
+JULY 14:
+- Appium is a freely distributed open source mobile application. UI Testing framework.
+- It offers cross-platform application testing (Windows, IOS, Android).
+- Appium is part of Selenium Family (uses Selenium libraries under the hood, extands Selenium webdriver)
+---------------------------------------------------------------------------
+ Prerequisite to use Appium:
+    - Install Android SDK (Studio), another -> Xcode, Android apps are written in Java
+    - Install JDK
+    - Appium Client Library
+    - APK App Info on Google Play -> .apk extensions for android
+    - js (Not required - whenever Appium server is installed, it comes by default with "Node.js" & NPM. it is included in current version of Appium.)
+    - Install Appium Studio (Appium Desktop)
+ -------------------------------------------------------------------------------
+Appium is a mobile testing tool/software/library.
+Support cross-browser testing of mobile applications:
+                - Android
+                - iOS
+Open source -> free
+            -> no support
+Prerequisites:
+ for Android:
+  - Android Studio/Android SDK
+  - JDK
+  - Appium/Appium client
+  - Node.js
+virtual device's CONs:
+ - time consuming
+ - takes CPU from local machine
+ 2.
+Appium Server
+Mobile device
+MEMORIZE:
+Appium server must be up and running (Appium desktop must be launched)
+Mobile device must be up and running
+Appium server and mobile device should be connected.
+Collapse
+
+
+
+cd ~
+cat .bash_profile
+cat .zshrc
+touch .bash_profile
+whoami
+export ANDROID_HOME="/Users/whoami(UPDATE_ME)/Library/Android/sdk"
+npm
+
+
+===============================================================================
+
+
+Android Studio is needed ONLY to launch a virtual device
+
+Appium server -->> purple logo application
+
+Virtual device/emulator -> phone in your computer
+
+Physical device -> real phone
+
+----------
+
+Appium Client Code: means your code, written in java/cucumber in Intellij
+
+
+                                        UIAutomator
+                    (JSON)               --->>>    Android Virtual Device / Physical Device
+Appium Client Code  --->>> Appium Server                                                         (Interview Question)
+                                         --->>>    iOS Virtual Device / Physical Device
+                                        XCUITest
+
+
+UIAutomator -> driver used to connect server and android device
+XCUITest    -> driver used to connect server and iOS device
+
+----------
+
+                               Chrome driver
+Selenium Client code in java    ---->>>>        Browser                 (Interview Question)
+
+Inspector in appium server => like DOM(document object model) in browser.
+  use inspector from appium server to locate elements.
+
+
+//tagName[@attribute='value']    -> selenium xpath locator
+//className[@attribute='value']  -> appium xpath locator
+
+Make all 3 as separate @Test:
+1. Preference -> Default values -> Checkbox preference
+2. Preference -> Default values -> Edit text preference -> type "Hello Techtorial" -> OK
+3. Preference -> Default values -> List preference -> Click cancel
+
+-----------------------------------------------------------
+
+At terminal emulator ....
+emulator -avd name
+
+
+Mobile testing tools:
+     Appium,
+     Espresso,
+     Xmarin
+
+
+inspector -> locate to element on your device
+
+(Before java 1.7 string didn't support from Switch statement)
+
+Locators:
+
+- xpath          => //className[@attribute='value']
+- id             => role of id in Android apps plays "resource-id"
+- accesiblityId  => value for accesiblityId attribute , mobile application specific
+- css => not supported by appium from version 1.15
+- findElementByAndroidUIAutomator() => android specific locator
+- name =>
+findElementByAndroidUIAutomator("attribute(\"value\")");
+findElementByAndroidUIAutomator("text(\"App\")")
+
+
+* native app and hyprid app
+
+-->>if device and inspector don't connect each other we re-start inspector
+
+
+Page Object Model advantages:
+maintanability --> change one time use everywhere,
+reusability
+organized
+structured
+
+
+
+
+
+ @AndroidFindBy(xpath = "//android.widget.TextView[@text='File getExternalFilesDir']//following-sibling::android.widget.LinearLayout/*[@text='Create']")
+    public AndroidElement created3;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='File getExternalFilesDir']//following-sibling::android.widget.LinearLayout/*[@text='Delete']")
+    public AndroidElement delete3;
+
+notes:
+Mobile testing tools:
+	Appium,
+	Espresso,
+	Xmarin
+Locators:
+- xpath => //className[@attribute='value']
+- id  	=> role of id in Android apps plays "resource-id"
+- accessibilityId => mobile application specific, value for accessibilityId attribute
+- css => not supported by appium from version 1.15
+- findElementByAndroidUIAutomator() => android specific locator
+- name => text attribute's value is represention of name
+findElementByAndroidUIAutomator("attribute(\"value\")");
+findElementByAndroidUIAutomator("text(\"App\")");
+
+=============================
+
+Which methods usually overriden? -->> toString() and equals() methods
+
+Override methods:
+    - toString()
+    - equals()
+    - hashCode()
+
+============================
+
+1. Gestures
+2. Hybrid vs Native apps
+    Native App:
+     you operate only in the application, no references to browser
+    Hybrib App:
+     you can redicrected to a mobile browser from an application
+3. Toast messages
+4. Mobile browser
+5. Profiler
+
+
+Error messages in mobile devices called Toast messages
+android.widget.Toast
+
+How is your approaching the test? --- >>> Interview Questions
+
+How to open developer tools?
+ right click-> inspect
+ ctrl+shift+i
+ F12
+ 3dot -> more tools --> developer tools /// at developer tools, 3dot -> more tools -> remote devices -> click url -> click inspect option
+
+
+Profiling:
+ - getting analytical information about impact of the application to the device:
+      * battery usage
+      * memory usage
+      * CPU usage
+      * Connection(Internet) usage
+
+
+Context is same as windowHandle in Selenium
+Mobile apps can have different contexts:
+    - NATIVE_APP
+    - WEB_APP

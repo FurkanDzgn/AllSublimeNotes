@@ -1,0 +1,238 @@
+---->>RESUME<<----
+
+don't put ssn, picture, bank acc, age,
+
+As i always mention
+As i mention
+So an a so far
+
+=========================================================================================
+                              Given User Create an Account
+                              Then User VAlidates AOI Post call is created
+                              And User validates the account which is in Database
+
+
+           UI                 <<-->>        API      <<-->>        Database(Store here)
+(User-Interface/ Front End)               (Back- End)             (It is not secure)
+       (Selenium)                      (HTTP Client)              (JDBC(Java Database Connectivity))
+                                       (Rest - Assured)
+
+   Mobile Appilcation
+
+
+                                Full Stack Sdet -->> test front-end and back-end // cover all the layers
+===========================================================================================
+
+UnitTest(JUnit,...) -->> developers did
+
+
+   Scrum Team 1:                                                                DevOps Team (Development Operation)
+    4 developers ->dev enviroment                                                 - If application doesn't open?
+    2 testers/QAs/SDETs (Manual and Automation)  -> QA enviroment                   Firstly check my computer
+    1 scrum master                                                                  Second  step connect with SM
+                                                                                      is tool that use from devOps team:
+    1 PO/BA (Product Owner/ Business Analysist)                                    * Jenkins ->
+                                                                                   * Kubernetes
+* We have many Scrum team it depends on Company                                    * Docker
+                                                                                   * AWS  -->> amazon web servers
+                                                                                   * Linux
+                                                              Dev
+                                                              Qa
+                                                              Sit
+                                                              E2e
+                                                              Staging
+                                                              Production
+
+   Performance testing team
+    JMeter (tool)
+
+=============================================================================================
+
+  Your Responsibilities:
+   - Writing test cases
+   - Analyzing the requirements
+   - Writing automation code
+   - Manual Testing
+   - Smoke Testing
+   - Regression Testing
+   - Check Emails
+   - Attend Scrum meetings
+   - Creating a bug - ticket in Jira(PO) / we don't create Jira ticket just PO create
+
+  Not Your Responsibilities:
+   - Creating JIRA user story ticket
+   - You don't have to the Developer's code.
+   - Unit testing
+   - Performance Testing
+   - Scheduling job in Jenkins
+=============================================================================================
+
+  STEP 1:
+
+How to apply?
+ 1. Diece.com                             We have to apply 20 companies on daily basis
+ 2. monster.com                           In the morning 7-8 am
+ 3. ziprecruitter.com                     Take calling 9 am to 10 am or 12 pm to 2 pm
+ 4. glassdoor.com
+ 5. buildinChicago.com
+ 6. Linkedln.com
+ 7. indeed.com
+
+  STEP 2:
+
+   Recruiter/Vendors
+     Conract   -> $45/50
+     Full_Time -> $90.000 per year/ yearly for fulltime
+
+   R2R -> Right to Represent ()
+
+  STEP 3:
+    Phone call Interview
+===============================================================================================
+
+Full time vs Contructor
+
+Full Time  -> Yearly basis salary on W2
+Contractor -> on hourly basis on W2 or 1099, for specific time
+
+
+
+
+
+
+
+
+resume:
+First name and lastname
+Overview:
+SDET with 6+
+
+Prof summary:
+1. Research test tools. methods and increaseing managament and organization skills.
+2. Experience in Test Cases, ability to advice on best practices for QA.
+Experience:
+1. Experience with automated test tools,
+Tell us more about you? Share your expereince, your backgroud, current project? We wanted to know who you are? what have you been doing?
+
+1. As SDET in MS I do different types of testing such as functional, regression, sanity,
+positive, negative, and of course daily smoke tests, I also tested Mobile applications using
+Appium.
+
+2. I am very comfortable working on windows, UNIX and Mac platforms. I have good
+knowledge in cross browser testing such as Chrome, Firefox, Safari etc.
+
+3. For UI testing, we use selenium WebDriver and relative X-path to find web Elements.
+
+4. I am good at core java, Maven, Cucumber, TestNG, Jenkins and many more tools for test
+automation. Mostly prefer opensource tools.
+
+5. I have worked on API testing on my project and I
+used Http Client, and Rest Assured library and for manual API testing I use Postman, ARC, DEV Tool.
+
+6. I have successfully designed and developed "many" tests scripts by using Data driven, Behavior driven
+(BDD).
+
+7. I was able to create my own "testing framework" based on the POM which supports
+BDD. As part of my job I developed test cases and new scenarios from scratch.
+Using Linux commands, I look log files and identify the errors and report using the bug
+tracking tool.
+final part: As a person I am very open mind and easy-going person. In our company I
+coordinate with other teams in order to understand the project and resolve unclear requirements
+and help others to understand, time to time sharing my knowledge with new team members as
+much as possible and as detailed as possible. actively participate in all scrum ceremonies.
+git add file1 file2 file3
+
+=========================================================================================================================
+
+
+
+Resume Tips:
+
+1. Keep as many key words - skill set as possible. include the bold writing to these key wording
+2. The pagination is needed. At least two  pages as a whole resume
+3. Keep the skillset as a table
+4. Keep it simple, black and white
+5. Kepp the address, name, phone, email and the EAD status on top: yet no full home address is needed
+6. Make a list or a doc with the all calls and emails you are getting to NOT be DOUBLE SUBMITTED
+7. Call them back(HR- Recruiters) email them back.
+8. Ask for the Interview Set up and give them available dates and timing (12 PM - 2 PM -3PM) -- after 10 AM every day
+9. Apply to 10-20 a day , and practice your resume everyday along with your project story
+10. Make an every plna - for the coding, practicing your speech and project story, practicing your typing, practicing your Framework knowledge
+, 50 JAVA white board qns,
+practice your resume
+
+Jon Hunting Portals:
+
+Dice.com
+Glassdoor.com
+Builtinchicago.com
+monster.com
+
+Search Button -> QA,SDET, Software Engineer in Test, Software tester
+   don't apply robert half
+   QA Analyzist -->> manual tester
+
+   * go to profile -> edit profile -> uptade (every day)
+
+
+Steps of the Hiring Process:
+
+1. A call with a recruiter - 10-20 mins
+  Basic: a. May i know if you are available in a job market? - yes
+         b. What is VISA/ EAD status? - Green card holder, Yes, I am a GC-EAD holder
+         c. May I know how you got your green card, citizenship?
+         d. SSN number --->> I will give you later, once the last  interview comes along
+         e. How much of compesition you are expecting? -->>
+         f. What days are you available?
+
+You can ask:
+  a. What company you are calling from? - end-client? vendor?
+  b. Where is it located?
+     Full time or contract
+  c. How much salary they are offering
+  d. What type of tools they are requiring as QA job resbonsibility
+
+2. An  email wit qns about you and Job Description - job description
+   a. Email them back with  your answers
+   b. Ask them to set an interview give thme the dates
+   c. Make your research - on  the company and on why you are applying there
+
+3. Interviews:
+4. Signing the offer letter, background check, on- boarding proccess.
+
+
+dice -> furkandzgn45@gmail.com -> Furkan.duzgun1
+
+
+
+
+
+
+
+
+BROWSERSTACK: is a cloud web and mobile testing platform that enables developers to test their websites and mobile applications across on-demand browsers, operating systems and real mobile devices, without requiring users to install or maintain an internal lab of virtual machines, devices or emulators. They have four primary products- Live, App Live, Automate and App Automate.
+
+APPDYNAMICS: provides a significant amount of detail to solve performance problems by using APM Tools and an analytics-driven approach. ... Our Application Performance Management solution baselines, monitors and reports on the performance of all transactions that flow through your app.
+
+PERFORMANCE TESTING :Part of-Non-Fuctional///Security, Reliablity, Usability, Resuablity, measuring system behaviour and performance under load
+
+CATERPLLAR: Construction Equipment, Mining Equipment, Diesel & Natural Gas Engines, Industrial Gas Turbines, Diesel-Electric Locomotives
+
+REST API has no official standard at all because it is an architectural style. SOAP API, on the other hand, has an official standard because it is a protocol. REST APIs uses multiple standards like HTTP, JSON, URL, and XML while SOAP APIs is largely based on HTTP and XML.
+
+REST API uses Web Application Description Language, and SOAP API used Web Services Description language for describing the functionalities being offered by web services.
+
+
+abdul -> qa manager
+     - qa case study
+     - write code
+
+     mention what we learn and what i will learn
+     carrying client capacity and steakholder
+     how to approach end client
+     collabaration
+     core value, learning minesite, diversity,
+     how you learn new tech.
+     * search company
+     What is mocking
+     Appium testing

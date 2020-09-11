@@ -1,0 +1,230 @@
+Jenkins (remote computer)
+ - is a CI automation tool
+ - CI(continues integration/CD(continues delivery)
+ dev environment/QA environment/staging environment/production environment
+
+
+   * CI -> Continuos integration
+       - Every merge/pull request in Bitbucket/Github/Gitlab (Git repository) is being automatically tested for:
+          - compilation
+          - unit test ( test piece of code)
+          - coverage
+
+
+
+   * CD -> Continuos Delivery - > Continuously deliver the code/application/product to end user/to production
+
+      Continuos Delivery:
+        - once the code merged it's in DEV env
+        - unit tests are triggered
+        - on success the code is deployed to QA env
+        - smoke/sanity/regression  tests are triggered(started)
+        - on success the code is deployed to STG env
+        - regression/integration tests are triggered
+        - on success the code is deployed to PRD env
+
+Jenkins is CI/CD tool
+   Think about jenkins as a remote computer, which is on(working) 24/7.
+
+
+
+* Jenkins is the  leading open-source continues integration tool developed by Hudson lab. It is cross-platform and can be used on Windows,Linux,Mac OS
+* Important Features of Jenkins
+      - change support
+      - email integration
+Microsoft Assure has everything don't need jenkins
+
+
+  Jenkins plugins:
+      - cucumber plugin
+      - email integration
+      - jira integration plugin
+
+  Jenkins alternatives:
+        - Bamboo
+        - Gitlab CI/CD
+           - git repo ( github, gitlab, bitbucket, gerrit)
+           - ci/cd
+        - Circle CI (new)
+        - Microsoft Azure
+              - all-in-house software:
+                  - git repo
+                  - jira
+                  - ci/cd (Azure DevOPs)
+        - GoCD
+
+
+
+  java -jar .\jenkins.war / on terminal
+  java -jar jenkins.war --enable-future-java  -->> if u have any error run this command / on terminal
+  java -jar jenkins.war --enable-future-java --httpPort=9090  -->> address already in use error
+
+  password -> ae62702b7f614df28f97eafa32a67718
+
+  admin admin
+  go to -> localHost8080 ->copy password -> click install suggested plugins ->
+
+  Jenkins units:
+     - jobs  -->> smallest jenkins unit
+     - pipelines -->> collection/set of linked to each other jenkins jobs  -->> common interview questions
+
+ Smoke test job
+ Regression test job
+ QA deployment job
+ STG deployment job
+ SIT job
+
+ Trigger a job  - start job
+ Terminate a job - stop job
+
+ SCM -> Source Code Management
+
+ Subversion -> svn
+
+ crontab guru
+ cron tab formula is used for schedule a job trigger:
+   * * * * *
+
+   * - minute
+   * - hour
+   * - day of month
+   * - month
+   * - day of the week
+
+  mvn clean install -DskipTests
+
+ admin / admin/ admin@gmail.com
+
+
+echo "  "
+sleep 10
+
+Create 15 jobs
+ - smoke
+ - regression
+ - deployment
+ - system integration test (SIT)
+ - system acceptance test (SAT)
+ - product acceptance test (PAT)
+ - product performance test (PPT)
+ - unit test
+
+
+
+
+
+ 	CI/CD
+Continuos integration/Continuos Delivery
+Continuos integration - every merge/pull request in Bitbucket/Github/Gitlab (Git repository) is being automatically tested for:
+	- compilation
+	- unit test
+	- coverage
+Continuos delivery - continuosly deliver the code/application/product to end user/to production.
+Continuos delivery:
+	- once the code merged it's in DEV env
+	- unit tests are triggered
+	- on succes the code is deployed to QA env
+	- smoke/sanity/regression tests are triggered
+	- on success the code is deployed to STG env
+	- regression/integration tests are triggered
+	- on success the code is deployed to PRD env
+Jenkins is CI/CD tool
+Think about jenkins as a remote computer, which is on(working) 24/7.
+Jenkins plugins:
+	- cucumber plugin
+	- email integration
+	- jira integration plugin
+Jenkins alternatives:
+	- Bamboo
+	- Gitlab CI/CD
+		- git repo (github, gitlab, bitbucket, gerrit)
+		- ci/cd
+	- Circle CI (new)
+	- Microsoft Azure:
+		- all-in-house software:
+			- git repo
+			- jira
+			- ci/cd (Azure DevOPs)
+	- GoCD
+Jenkins units:
+	- jobs - smallest jenkins unit
+	- pipeline -  collection/set of linked to each other jenkins jobs
+jobs contains of builds
+Smoke test job
+Regression test job
+QA deployment job
+STG deployment job
+SIT job
+Trigger a job 	- start job
+Terminate a job - stop job
+SCM - Source Code Management (Git)
+cron tab formula is used for scheduling a job trigger:
+	* * * * *
+	* - minute
+	* - hour
+	* - day of month
+	* - month
+	* - day of the week
+Create 15 jobs:
+- smoke
+- regression
+- deployement
+- system integration test(SIT)
+- system acceptence test (SAT)
+- product acceptence test (PAT)
+- product performance test (PPT)
+- unit test
+
+Every code merge codes production -->> CI/CD
+Every code merge should go all the way down to production
+
+Jenkins Pipeline  -->> chain of jobs'
+  * is a chain of jenkins jobs connected to each other.
+  * is a collection of jenkins jobs.
+
+Pipeline can be created using:
+    - Pipeline Plugin.
+    - Jenkins file. (.jenkinsfile)
+
+1. Pipeline plugin gives us an opportunity to trigger one job from another
+2. Jenkins file - we code a jenkins job specifications in Groovy
+   DSL (Domain Specific Lanuage)
+
+Using Cucumber reports plugin we can generate fency cucumber report in Jenkins
+
+  * global
+
+How often you release?  -->> interview questions
+  - At least
+
+
+
+  ab0f59695988441d92d77d1fb5821020
+
+================================
+
+Hi everyone just incase if someone straggle with cucumber report yesterday here is the steps that we did yesterday:
+9:55
+1 Download to EC2 machine :
+Jenkins
+Maven
+Git
+
+Manage Jenkins
+Global Tool Configuration
+Maven Configuration -> File path -> C:\Users\Administrator\Downloads\apache-maven-3.6.3-bin\apache-maven-3.6.3\bin    -> (make sure you unzip your maven apache file)
+Default global settings provider -> use default maven global settings
+GIT -> Path -> C:\Program Files\Git\bin\git.exe
+MAVEN -> Name -> Maven 3
+Maven HOME -> C:\Users\Administrator\Downloads\apache-maven-3.6.3-bin\apache-maven-3.6.3\
+CHECK Install automatically box
+Apply and Save
+
+Create SmokeTestJob
+Add description
+Add git repository
+In Build Maven version add Maven 3
+In Build Goals add Test -DskipTests
+Build -> Settings file -> Use default Settings file
+POST BUILD ACTION -> File include pattern -> **/cucumber.json*
+Apply and Save

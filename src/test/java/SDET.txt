@@ -1,0 +1,327 @@
+------------------SDET------------------
+
+==Day1==
+
+Html
+Selenium Webdriver
+TestNG(Framework, test annotation, assertion and verification)
+TestNG Framework
+Cucumber BDD
+Cucumber Framework
+Junit(Assertion and Verification)
+Api Testing (HttpClient , Rest-Assured Library)
+Sql (Oracle)
+Selenium Grid
+AWS EC2 machine
+Jenkins
+Maven
+Git (github)
+Appium
+Jira, Rally, Azure DevOps
+
+=====
+
+
+HTML ==>> HyperText Markup Language
+          It is not coding Language, It is a Markup Language
+
+Differences between Coding Language(Java,C++,....) and Markup Language
+1- dynamic functionalities - in markup Language there is no method
+
+Using HTML we can organize our document
+text, links, header, title, picture, button,
+
+Markup Language mark up english to another format.
+
+Maven, Html
+
+HTML Language is needs to be saved with .html extension
+
+Using help of Chrome,Firefox and Safari we can see our html code with User friendly way.
+
+-Single Page Application
+Every page handled on the page.So, you do not need to refresh
+everything just only related part will refreshed.
+
+HomePage, About, Apply, Transaction, quick pay
+
+Facebook
+
+What is Web Apllication?
+
+Web Application(Selenium),Desktop application,Mobile Application(Appium)
+all web site    Chrome
+                intellij...
+                (Everything you see on the desktop
+                 are all desktop applications)
+
+(So everything that can be downloaded to computer is desktop, if you can access only thru Internet is Web Application)
+
+Most Used Html Tags -->>
+<html>
+<head>
+<body>
+<h1>to<h6>for heading levels
+<ol>.<ul><il>
+<p>
+<div>for bigger content sections
+<img> for image .....
+--
+
+HTML + CSS + JavaScript = Front end developer( Angular JS)
+
+Java + SpringBoot framework = backend developer
+
+Full Stack Developer
+
+Full Stack Automation Test Engineer
+Full Stack Software Development Engineer in Test
+
+
+<br> is for break. Your tag or text be execution from next line on the page
+
+<h1 align="center">Testing Tools</>
+<h1> --> Tag
+align --> align is Attribute
+Testing Tools text is --> content text
+<h1 align="center">Testing Tools</h1> --> Web Element. Selenium works with web element.
+
+<a href="https://www.techtorialacademy.com/">Techtorial</a>
+<a> --> Tag
+href --> Attribute
+Techtorial --> content text
+
+NOTE: if the text is inside the tag and has the value it is called attribute
+
+DOM --> Document Object Model
+
+<table border="1">
+     		<tbody>
+     			<tr>
+     				<td>Last Name</td>
+     				<td>Sales</td>
+     				<td>Country</td>
+     				<td>Quarter</td>
+     			</tr>
+     			<tr>
+     				<td>Smith</td>
+     				<td>$16000</td>
+     				<td>UK</td>
+     				<td>Qtr3</td>
+     			</tr>
+     			<tr>
+     				<td>Jhonson</td>
+     				<td>$140000</td>
+     				<td>England</td>
+     				<td>Qtr2</td>
+     			</tr>
+     		</tbody>
+     	</table>
+
+
+Tbody is child of table
+tr is child of tbody
+td is child of tr
+
+This two td is sibling
+<td>Last Name</td>
+<td>Sales</td>
+
+This two tr is sibling
+
+<tr>
+     <td>Last Name</td>
+     <td>Sales</td>
+     <td>Country</td>
+     <td>Quarter</td>
+     		</tr>
+     		<tr>
+     <td>Smith</td>
+     <td>$16000</td>
+     <td>UK</td>
+     <td>Qtr3</td>
+     		</tr>
+
+============================
+
+==Day2==
+
+<html>
+<head>
+<title> --> this is related with the tab/window name
+<br> --> to be able to display the next in next line
+<div> --> division
+<body> --> you can implement alot of  tags inside the body
+<table> this is for creating table
+<tbody> inside table we need to have tbody to provide the values
+<tr> --> it is creating new row
+<td> we are giving values directly to the table
+<a href=""> --> To be able to  give the link and display them as link on UI.
+<img src="locationOfImage(path of image or link)f"-->
+<strong> --> makes your text bold
+<ol> --> ordered list
+<ul> --> unOrdered list
+<li> --> providing elements using list
+<select> --> In hyml select tag create drop down in boxes
+
+<p><strong>Favorite Quetes<strong><p>
+
+JavaScript + HTML + Css  => Angular JS Framework, React Framework --> for frontend development
+Java+Rest = Sprint framework --> for backend development
+
+TestNG framework and Cucumber
+
+Right Click on the  chrome and select inspect to be able to open development Tool
+Mac = optional+command+i
+Windows = ctrl+alt+i
+
+
+Element ->-> to find the web elements
+
+--------------------------------------------------
+
+SELENIUM
+
+Selenium is a library to automate the web application.
+
+They are different purpose not a different version
+
+1- Selenium IDE
+One of the firefox plugin where you can record your test executions and play them for next execution.
+It has no a lot of functions like Selenium WebDriver.
+
+2- Selenium RC(Remote Control)
+You can use the coding to automate the web application with Selenium RC. You need to start/stop the server for your execution.
+
+3- Selenium WebDriver
+3.14.
+Using code, we can automate the web application to test. We will be interacting with webelements
+se we can control our website.
+<a href="https://www.techtorialacademy.com/">Techtorial</a>
+
+4- Selenium Grid
+Selenium grid creates different node's to be able to achieve the parallel testing.
+
+900 TC 6 server that's total executuion time will be 30 - 1hour
+
+
+Tell me about yourself? Can you please tell about your profile picture?
+
+
+Selenium WebDriver Pros
+1- Selenium Webdriver supports multiple coding language.For example: phyton,java,ruby,c++....
+2- It is free and open source tools
+NOTE: open source --> everyone can see the code for this development, and everyone can contribute to improve.
+Alpha versions are not that much reliable.
+3- It has huge community
+4- It can works with different browser for example: chrome,opera,firefox,ie
+
+Selenium Cons/limitation/disadvantages
+1- You can not compare or validate the picture
+2- We can not handle the captcha
+3- They don't have suppport team.
+4- Learing curve is diffucult
+5- It depends 3 party tools for reporting(Cucumber html, TestNG, Extends report)
+
+Intellij, Chrome,
+
+ Selenium Webdriver users:
+Testers who want to save time on manually testing.
+Developers have confidence in testing to know they aren't introducing regressions.
+
+         Uses:
+To test across multiple browsers and platforms.
+A customizable and powerful framework.
+Test script <-->WebDriver API <--> Browser.
+
+==========================
+----------Day03-----------
+
+Angular framework
+React framework
+
+1- Dowload the selenium jar file from seleniumhq website --> https://www.selenium.dev/downloads/
+2- Dowload the chromedriver from --> https://chromedriver.storage.googleapis.com/index.html?path=81.0.4044.69/
+3- Add Jar file to your project
+   *File
+   *Project Structure
+   *Module -->Dependency --> click plus button
+   **Find your jar file and add it to your project
+4- Go to your project structure and select  the Module->Dependency->Plus button --> find your jar file and add as a dependancy
+5- Copy paste the chromedriver to your project
+6- System.setProperty("webdriver.chrome.driver", "locationOfchromedriver.exe");
+
+Selenium Webdriver
+- Selenium works with multiple browser (Chrome,Firefox, Ie, Opera)
+- Selenium works with multiple languages (Ruby, Java, C++)
+- Selenium works with multiple operation systme (Windows, Max, Linux)
+
+get("url") --> navigates to website
+getTitle(); --> gets the title of current page
+getCurrentUrl; --> gets the url of current page
+getPageSource() --> gets the html of current page
+
+
+
+<h1 name="tech" id="techtorial1">Techtorial Academy</h1>
+  <h1> is tag
+  name id are attribute
+  techtorial academy is text
+  <h1 name="tech" id="techtorial1">Techtorial Academy</h1> --> webelement
+
+
+
+Automation of the Page
+1- Find the webElement
+2- Find the unique locators
+3- Store on the selenium project using findElement(locator); method
+4- you can use the method from WebElement object
+
+
+Task:
+Find the locator for sign-on button
+get the text of sign-on button.
+if the text is equals to SIGN-ON print true else print false;
+
+
+HOMEWORK:
+Get the text for Register, Support and contact and validate them using java.
+If it is passed print test is passed otherwise print failed.
+
+----
+My Notes
+
+List Of Locators
+id
+name
+class name
+linktext
+partial linktext
+tag name
+XPATH
+CSS selector
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

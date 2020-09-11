@@ -1,0 +1,939 @@
+select * from employees;
+
+select * from departments;
+
+select * from JOB_HISTORY;
+
+select * from locations;
+
+select * from regions;
+
+DESCRIBE employees;
+
+-- SQL Condition
+
+/*
+   SQL is not case sensitive
+*/
+
+select *
+from employees;
+
+select first_name, last_name
+from employees;
+
+-- Select employees who makes more than 10000
+
+select *
+from employees
+where salary>10000;
+
+-- Select employees who works at departments
+
+select *
+from employees
+where JOB_ID = 'IT_PROG';
+
+-- Select first_name, salary of employees who has job_id as 'IT_PROG'
+
+select first_name, salary
+from employees
+where JOB_ID = 'IT_PROG';
+
+select first_name, salary*0.2 + salary
+from employees
+where JOB_ID = 'IT_PROG';
+
+-- Select employees first_name, email who works as ST_ClERK or IT_PROG
+
+select first_name, email, job_id
+from employees
+where job_id = 'IT_PROG' or job_id='ST_CLERK';
+
+-- Select employees first_name, hire_date salary who makes salary between 8000 and 15000
+
+select first_name, hire_date, salary
+from employees
+where salary >= 8000 and salary<=15000;
+
+
+
+select first_name, hire_date, salary
+from employees
+where salary between 8000 and 15000;
+
+-- select employees who works in department_id 10 and 50
+
+select *
+from employees
+where department_id=10 or department_id=50;
+
+-- select employees who works in department_id 10 20, 50 and 100
+
+select *
+from employees
+where department_id in(10,20,50,100);
+
+select *
+from employees
+where department_id=10 or department_id=20 or department_id=50 or department_id=100;
+
+-- IN Operator
+
+select *
+from employees
+where department_id in(10,20,50,100) ;
+
+-- Select all employees except employee who has employee_id 105
+
+-- IS NOT Operator
+select *
+from employees
+where employee_id !=105;
+
+select *
+from employees
+where employee_id != 105;
+
+select *
+from employees
+where employee_id <>105;
+
+select *
+from employees
+where not employee_id = 105;
+
+-- IS NOT is used only with null values
+select *
+from employees
+where manager_id is not null;
+
+-- Concatinating the values
+
+select first_name ||'_'|| last_name as FullName
+from employees;
+
+-- Generate email address for all employess with first_name and last_name, who only for those who hired before 2005
+-- for example: EllenAbel@gmail.com
+
+select first_name ||'_'|| last_name || '@gmail.com' as fullName, hire_date
+from employees
+where hire_date<'01-JAN-95';
+
+
+select *from employees;
+
+select first_name||last_name ||'@gamil.com' as FullName, hire_date
+from employees
+where hire_date<'01-JAN-95';
+
+-- SORTING DATA
+
+select first_name, email
+from employees
+order by first_name, email asc;
+
+select first_name, email
+from employees
+order by first_name, email desc;
+
+select first_name, email
+from employees
+order by first_name desc, email asc;
+
+select first_name, email
+from employees
+order by first_name desc, email desc;
+
+select first_name, last_name
+from employees
+ORDER BY first_name;
+
+select first_name, last_name
+from employees
+ORDER BY 1;
+
+select first_name, last_name
+from employees
+ORDER BY 2;
+
+/*
+  FInd out employees first_name, last_name,
+  employee_id, salary for employees
+  who has employee_id between 100 and 150
+  sort them by salary ascending and employee_id descending.
+*/
+select first_name, last_name, employee_id, salary
+from employees
+where  employee_id between 100 and 150
+order by salary, employee_id desc;
+
+select first_name,last_name,employee_id,salary
+from employees
+WHERE employee_id between 100 and 150
+order by salary , employee_id DESC;
+
+/*
+Write a query that will display first_name,salry,hire_date,job_id
+for those employees who works in department_id 50 and was hired after
+1999.Sort the data by salary and employee_id
+*/
+
+
+select first_name,last_name,salary,hire_date,job_id
+from employees
+where department_id = 50 and hire_date>'31-DEC-1999'
+order by salary ,employee_id ;
+
+
+-- SCANNER IN SQL
+
+select *
+from &employees;
+
+select &column
+from employees;
+
+-- Write a query that will ask from user to enter salary and will display first_name
+
+select first_name
+from employees
+where salary = &salary;
+
+--
+
+select first_name,&column
+from employees;
+
+-- LIKE Clause
+-- startWith(), endsWith(), contains()
+
+select first_name
+from employees
+where first_name like 'A%'; -- startsWith
+
+-- Write a query that contains letter 'a' at first_name
+
+select first_name
+from employees
+where first_name like '%a%'; -- contains
+
+-- % --> will check if there is 0 or any number of letters
+
+select first_name
+from employees
+where first_name like '%a'
+order by first_name desc; -- endsWith
+
+-- Write a query that will dsiplay all emplyees who has letter 'e' at the end of their last_name
+-- and their job_id start with letter 'I' and ends with letter 'G'
+
+select first_name, last_name
+from employees
+where last_name like '%a'
+and job_id like 'I%G';
+
+
+select *
+from employees
+where last_name LIKE '%a' and job_id LIKE 'I%G';
+
+-- Find out employees who has two letter 'l' in their first_name
+
+SELECT *
+from employees
+where first_name like '%l%l%';
+
+-- Get information of employees who has second letter 'a' in their first_name
+
+select *
+from employees
+where first_name like '_a%';
+
+/*
+   Find out all employees who has manager
+   and who salary in range of 5000 and 20000
+   only those who has job_id 'IT PROG', 'FI_ACCOUNT', 'PU_ClERK'
+   and their first_name or last_name has to contain letter a or e.
+   Sort this data by last_name descending.
+*/
+select *
+from employees;
+
+select *
+from employees
+where manager_id is not null
+and salary between 5000 and 20000
+and job_id in('IT_PROG', 'FI_ACCOUNT', 'PU_CLERK')
+and ((first_name like '%e%' or first_name like '%a%') or (last_name like '%e%' or last_name like '%a%'))
+order by last_name desc;
+
+
+select *
+from employees
+where manager_id is not null
+and salary between 5000 and 20000
+and job_id in('IT_PROG', 'FI_ACCOUNT', 'PU_CLERK')
+and ((first_name like '%a%' or first_name like '%e%') or (last_name like '%a%' or last_name like '%e%'))
+order by last_name desc;
+
+
+-- Display all employees concatenated first_name and last_name,salary
+-- only those whose salary is not in range of 5000 and 7000
+
+select first_name ||' '|| last_name as Fullname, salary
+from employees
+where salary<5000 or salary>7000;
+
+select first_name || last_name as FullName, salary
+from employees
+where salary<=5000 or salary >=7000;
+
+select first_name || last_name as FullName, salary
+from employees
+where salary not between 5000 and 7000;
+
+-- FUNCTIONS
+
+-- Single Row Functions
+
+-- Character, Number, Date
+
+select upper(first_name)
+from employees;
+
+select lower(last_name)
+from employees;
+
+select initcap(email)
+from employees;
+
+select LENGTH(first_name) , first_name
+from employees;
+
+select LENGTH(first_name) as length, first_name
+from employees;
+
+select first_name, substr(first_name,-2,2)
+from employees;
+
+-- Generate Initial for all employees like Ellen Abel -> E.A and also first_name and last_name in seperate columns
+
+select first_name,last_name, substr(initcap(first_name),1,1) ||'.'||substr(initcap(last_name),1,1)||'.' as NAME
+from employees;
+
+-- Display true if employee's first_name starts with letter 'A'
+
+select first_name, 'true'
+from employees
+where first_name like 'A%';
+
+-- INSTR -> indexof('') method in java
+
+select instr(first_name, 'a')
+from employee;
+-- where first_name like 'A
+
+select first_name, instr(lower(first_name), 'a')
+from employees;
+
+select first_name, instr(lower(first_name), 'a', 3)
+from employees;
+
+select first_name, instr(lower(first_name), 'a', INSTR(lower(first_name), 'a')+1)
+from employees
+where first_name like '%a%';
+
+select first_name, instr(lower(first_name), 'a', instr(lower(first_name) , 'a', (INSTR(lower(first_name), 'a')+1)))
+from employees;
+
+-- Find put employees who has second letter as 'L' in their capitalized first_name
+
+select first_name
+from employees
+where substr(upper(first_name),2,1) like 'L';
+
+
+select first_name
+from employees
+where substr(upper(first_name),2,1) = 'L';
+
+select first_name
+from employees
+where substr(upper(first_name),2,1) like 'L';
+
+select first_name
+from employees
+where instr(upper(first_name), 'L') =2;
+
+select first_name
+from employees
+where upper(first_name) like '_L';
+
+
+-- concat()
+-- || -> operator
+-- concat() -> concatinating function
+
+select concat(first_name, last_name)
+from employees;
+
+select concat(concat(first_name, ' '), last_name)
+from employees;
+
+--Display
+select lower(first_name||last_name),instr((first_name||last_name),'a')
+from employees;
+
+select first_name, SUBSTR(first_name, 2,2)
+from employees;
+
+select first_name, salary, hire_date
+from employees
+where mod(LENGTH(first_name),5)= 0
+order by first_name desc;
+
+select first_name, salary, hire_date
+from employees
+where mod(length(first_name),2) = 1
+order by first_name desc;
+
+---REPLACE
+---SELECT REPLACE('SQL Tutorial', 'T', 'M');
+select replace(lower(first_name), 'e','*'), last_name
+from employees;
+
+--LPAD - RPAD
+select lpad(first_name, 10,'*')
+from employees;
+
+select rpad(first_name,20,'~$')
+from employees;
+
+select substr(phone_number,9,4)
+from employees;
+
+select rpad(replace(phone_number,SUBSTR(phone_number, 9,4 ),0),12,0)
+from employees;
+
+--Date Functions
+--to_char
+select hire_date , to_char(hire_date , 'Month DD , YYYY')
+from employees;
+
+--June 17 , 1987
+select hire_date , to_char(hire_date , 'Month DD , YY')
+from employees;
+
+select hire_date , to_char(hire_date , 'Mon/DD/YYYY')
+from employees;
+
+select sysdate, systimestamp
+from dual;
+
+--dual table -> dummy table
+-- Find out how many months did each employee worked in  Company
+-- Difference between today's date and hire _Date
+
+
+
+select first_name, hire_date, (sysdate-hire_date)
+from employees;
+
+
+select first_name, hire_date, round(months_between(sysdate, hire_date),2)
+from employees;
+
+select first_name, hire_date, round(months_between(sysdate, hire_date)/12)
+from employees;
+
+select first_name, hire_date, round(months_between(sysdate, hire_date)*30)
+from employees;
+
+--mod -> modular
+--round -> will round decimal numbers
+--trunc
+
+select mod(5,2)
+from dual;
+
+select round(5.55)
+from dual;
+
+select trunc(5.55)
+from dual;
+
+--round method returns the number it closes
+--trunc returns the whole number the value has
+--Date Functions
+--to_char, months_between, next_month,next_day;
+
+select next_day(sysdate,'Monday')
+from dual;
+
+select to_char(date '1994-09-30','Month DD YY'), months_between(sysdate , date '1994-09-30')*30
+from dual;
+
+select hire_date, to_char(hire_date, 'Mon/DD/YYYY')
+from employees;
+
+select *
+from employees
+where to_char(hire_date, 'mon')='jan';
+
+select *
+from employees
+where hire_date like'%JAN%';
+
+select hire_date, salary*1.20 ,salary
+from employees
+where to_char(hire_date, 'mon') in ('jun' , 'jun' , 'dec' , 'sep');
+
+select count(first_name)
+from employees;
+
+select count(salary)
+from employees;
+
+select max(salary)
+from employees;
+
+select salary
+from employees;
+
+select STDDEV(salary)
+from employees;
+
+select round(AVG(salary))
+from employees;
+
+select SUM(salary)
+from employees;
+
+select sum(salary), department_id
+from employees
+group by department_id
+order by department_id;
+
+select department_id, job_id ,  sum(salary)
+from employees
+group by department_id, job_id
+having sum(salary) > 10000
+order by department_id, job_id;
+
+-- What is the difference between where and having ?
+-- Having work with aggregate functions
+-- where doesnt work with aggregate funtions
+-- JDBC -> Java Database Connectivity
+-- ETL extract trasform load !!!
+
+select *
+from employees
+where mod(length(employee_id),2) = 1 ;
+
+select REPLACE(first_name,'a','***')
+from employees
+where length(first_name)=4;
+
+select department_id,  max(salary)
+from employees
+group by department_id, job_id
+having count(department_id)>5
+order by department_id;
+
+/*
+   1. Find all employees who has odd employee_id
+
+   2. Find all employees who has 4 letters in first_name
+   and replace letter 'a' in their first_name with ***
+
+   3. Find out count of employees and max salary
+   in each department only if employee number is more than 5
+*/
+
+
+
+
+select *
+from employees
+where mod(employee_id,2) = 1;
+
+select replace(first_name, 'a', '***')
+from employees
+where length(first_name)=4;
+
+select department_id, count(*), max(salary)
+from employees
+group by department_id
+having count(*)>5;
+
+select department_id ,count(department_id), max(salary)
+from employees
+group by department_id
+having count(department_id)>5;
+-- DISTINCT Function will return only unique data
+
+select distinct(first_name)
+from employees
+order by first_name;
+
+-- Get the first_name of the person who makes highest salary
+
+select first_name
+from employees
+where salary = 24000;
+
+select max(salary)
+from employees;
+
+-- SUB QUERY
+
+select first_name
+from employees
+where salary = (select max(salary) from employees);
+
+-- Find out all employees who makes more than average salary
+
+select *
+from employees
+where salary>= (select avg(salary) from employees);
+
+
+select *
+from employees
+where salary>(select avg(salary) from employees );
+
+-- Find out employees who works in same department
+-- of employee with the employee_id 153
+
+select *
+from employees
+where department_id=(select department_id from employees where employee_id=153);
+
+
+select *
+from employees
+where employee_id=153;
+
+select *
+from employees
+where department_id=(select department_id from employees where employee_id=153);
+
+select first_name, salary
+from employees
+where rownum<2
+order by salary desc;
+
+-- If you use ROWNUM, you can apply only < or <= operator
+
+select first_name, salary
+from employees
+where rownum>5 -- it doesn't work
+order by salary desc;
+
+-- Find out employee's first_name who makes second largest salary --> Most popular INTERVIEW questions
+
+select first_name,salary
+from employees
+where salary = (select max(salary)
+from employees);
+
+select max(salary)
+from employees;
+
+select distinct(salary)
+from employees
+order by salary desc;
+
+select distinct(salary), first_name
+from employees
+where rownum<=2
+and salary != (select max(salary)from employees)
+order by salary desc;
+
+select first_name,salary
+from employees
+where salary = (select distinct(salary)
+from employees
+where rownum<=2
+and salary != (select max(salary) from employees))
+order by salary desc;
+
+-- find out 5 largest salary
+
+select min(salary)
+from (select distinct(salary)
+from employees
+order by salary desc)
+where rownum<=5;
+
+select first_name,salary
+from employees
+where salary=(
+select min(salary)
+from (select distinct(salary)
+from employees
+order by salary desc)
+where rownum<=10); -- 5
+
+
+select *
+from (select * from employees where rownum<6 order by salary desc)
+where rownum<2
+and salary = (select min(salary) from  (select * from employees where rownum<6 order by salary desc))
+order by salary asc;
+
+select substr(first_name,-3,2)
+from employees;
+
+select first_name ,manager_id, employee_id
+from employees;
+
+-- Find out employees each manager is managing, eclude manager_id null
+
+select manager_id, count(*)
+from employees
+group by manager_id
+having manager_id is not null
+order by COUNT(*);
+
+
+select first_name, department_id
+from employees
+where department_id= (select department_id
+from departments
+where department_name = 'Marketing');
+
+-- How to Combine Two Tables?
+-- JOINS
+
+select e.first_name, e.department_id, d.department_name
+from employees e join departments d on
+e.department_id=d.department_id;
+
+-- aries -> employees e
+
+-- Find out employee name and  hire_date and end_date, add a column that shows how many years that employee worked in company
+
+select e.first_name,last_name, hire_date, end_date, round(MONTHS_BETWEEN(h.end_date, e.hire_date)/12)
+from employees e join job_history h on
+e.employee_id = h.employee_id;
+
+-- Find out employee name, job_title only for those whose name start with letter 'A'
+
+select e.first_name || e.last_name, j.job_title
+from employees e join jobs j on
+e.job_id = j.job_id
+where first_name like 'A%';
+
+-- Find out city name for each department
+select d.department_name, l.city
+from departments d join locations l on
+d.location_id = l.location_id;
+
+-- Joining to indirect tables
+-- County name for each department_name
+
+select department_name, country_name
+from departments d join locations l on
+d.location_id = l.location_id
+join countries c on
+l.country_id = c.country_id;
+-- ------------------------------------------------------
+select department_name, region_name
+from departments d join locations l
+using (location_id)
+join countries c
+using (country_id)
+join regions r
+using (region_id);
+
+-- find out first_name last_name, salary, month number since terminations
+-- of all employees from job_history table
+
+select *
+from job_history;
+
+select first_name, last_name, salary, round(months_between(sysdate, j.end_date)) as Termination_date
+from employees e inner join job_history j
+using (employee_id);
+
+-- employees -> 107 rows -> 97 was not selecting
+-- job_history -> 10 rows
+-- Inner join will return the data that are available in both tables
+--
+
+select first_name, last_name, salary, round(months_between(sysdate, j.end_date)) as Termination_date
+from employees e left join job_history j
+using (employee_id);
+
+select first_name, last_name, salary, round(months_between(sysdate, j.end_date)) as Termination_date
+from employees e right join job_history j
+using (employee_id);
+
+
+select first_name, last_name, salary, round(months_between(sysdate, j.end_date)) as Termination_date
+from employees e right join job_history j
+on e.employee_id = j.employee_id
+where e.employee_id IS null;
+
+--
+select first_name, last_name, salary, round(months_between(sysdate, j.end_date)) as Termination_date
+from employees e full outer  join job_history j
+on e.employee_id = j.employee_id;
+
+select first_name, last_name, salary, round(months_between(sysdate, j.end_date)) as Termination_date
+from employees e right join job_history j
+on e.employee_id = j.employee_id
+where e.employee_id IS null or j.employee_id IS null;
+
+-- Right join will return all data that are matched and didn't match from right table
+-- Left join will return all data that  are matched and didn't match from left table
+-- Full Outer join will return all data from both tables even if they are matched
+
+-- SELF JOIN TABLES
+select e.employee_id, e.first_name, e.manager_id, m.first_name
+from employees e join employees m on
+m.employee_id = e.manager_id; -- manager employee_id has to match employee's manager_id
+
+-- SET OPERATIONS
+
+-- UNION, UNION ALL, MINUS, INTERSECT
+
+-- QUERY1 UNION QUERY2
+-- QUERY1 UNION ALL QUERY2
+-- QUERY1 MINUS QUERY2
+-- QUERY1 INTERSECT QUERY2
+
+-- Departments of 10, 20 ,50
+-- 48 records
+select first_name, last_name, salary, department_id
+from employees
+where department_id in(10,20,50)
+UNION ALL
+select first_name,salary, department_id
+from employees
+where department_id in(10,30,100);
+-- 13 records
+
+-- Difference between UNION and UNION ALL
+-- UNION      will return all combined data from first query and second query without duplicates
+-- UNION ALL  will return all combined data from first query and second query with duplicates
+
+-- GET all info of employee who makes between 5000 and 7000 and between 9000 and 12000 using UNION operator
+
+select *
+from employees
+where salary between 5000 and 7000
+UNION
+select *
+from employees
+where salary between 9000 and 12000;
+
+select *
+from employees
+where salary between 5000 and 10000
+UNION ALL
+select *
+from employees
+where salary between 9000 and 12000;
+-- 9000 to 10000
+
+-- return 5000 to 8999
+select *
+from employees
+where salary between 5000 and 10000
+MINUS
+select *
+from employees
+where salary between 9000 and 12000;
+
+-- return just department_id 30
+select first_name, department_id
+from employees
+where department_id in(10,20,30)
+MINUS
+select first_name, department_id
+from employees
+where department_id in(10,20,100);
+
+
+-- return just department_id 30 and 50
+select first_name, department_id
+from employees
+where department_id in(10,20,30,50)
+MINUS
+select first_name, department_id
+from employees
+where department_id in(10,20,100);
+
+-- Once two queries are combined the column names has to match
+
+-- return 10 and 20
+select first_name, department_id
+from employees
+where department_id in(10,20,30,50)
+INTERSECT
+select first_name, department_id
+from employees
+where department_id in(10,20,100);
+
+-- MINUS will remove second query data from first query
+-- Intersect will return data two queries having in common
+
+-- Find out employee_id all employees who are active in the company
+select employee_id
+from employees
+MINUS
+select employee_id
+from job_history;
+
+select *
+from employees
+where employee_id in (select employee_id
+from employees
+MINUS
+select employee_id
+from job_history);
+
+select employee_id, department_id, job_id
+from employees
+minus
+select employee_id, department_id, job_id
+from job_history;
+
+-- CREATE, INSERT, UPTADE, DELETE
+
+create table students (first_name varchar2(10), student_id number, age number );
+
+select *
+from students;
+
+insert into students values ('Furkan', 101, 25);
+insert into students values ('Patel', 102, 32);
+insert into students values ('Srikkanth', 103, 19);
+insert into students values ('Kumar', 104, 43);
+
+delete students where first_name = 'Furkan';
+
+update students set age = 30 where first_name='Furkan';
+
+truncate table students; -- delete all rows
+
+commit;
+
+rollback;
+
+drop table students;
+-- delete   -> deletes specific data, rollback will work if you deleted data
+-- truncate -> deletes whole data, rollback won't work
+-- drop     -> deletes data and structure of table, rollback won't work
+
+-- TASK
+select * from employees;
+
+insert into students values ('Steven', 100, 20);
+
+select 'insert into students values ('''||first_name||''', '||employee_id||', 20);'
+from employees;
+

@@ -1,0 +1,65 @@
+Ticketing system: JIRA
+Sprint grooming (1-1.5h):
+- upcoming sprint details/tickets/nuances
+- estimation
+- blocking/ third party extensions/requirement Ex. operation team
+(1day - 1point).
+(no more than 8points) - dev-4, qa-5 (manual/feature/visual/monkey, automation, testRail case creation)
+2 weeks calendar
+14 days - 4 day weekends
+10 days
+Previously: 1-2 days work == 2-3 point.
+10 days range
+5 assigned
+5 days left (1 or 1.5 ticket)
+Sprint commitment - what you should be able to cover for the entire sprint
+45 capacity
+50 commitment
++ up 10 score
+burn chart -
+Team structure (it depends)
+3 - FE devs (30) - Associate/ Regular/ Sr. Dev
+1 - BE dev (10) - Sr.Dev
+2 - QAs (20) - Regular/Sr.
+1 - PM
+1 - Scrum master
+35-45 (vacation/PTO/sick leave)
+capacity - 60/50 User Points
+Comittment - 70/50-60 Estimated tickets points
+Task assigned.
+Status:
+Assigned/To do          Progress/Anylize    Blocked         Review(QA)                  Done
+1751 Ticket.              Implementation                    Assign to QAs.              Yes
+StandUps: Update daily changes/blockes/discuss all about tickets going on
+Release time: 2 weeks SDLC part
+# git branch
+Ex. feature/RMC2-1751_bla_bla
+-- branch from
+Remote:
+Dev implement: 2.66 release
+feature/RMC2-1751_bla_bla  - PR --> develop --> master
+develop - implementation/develop/instantiating/executing/testing
+master - represent PROD env (https://www.techtorialacademy.com/)
+1st week: (5 teams)
+New Implementation:
+1. Create feature/RMC2-1751_bla_bla
+2. Implement
+3. PR(peer review)
+4. Approved feature/RMC2-1751_bla_bla --> develop (DEV)
+Testing:
+1. feature/RMC2-1751_bla_bla - DEV
+2. QA ENV
+3. QA testing start: Create branch --> Testing --> PR --> feature/RMC2-1751_bla_bla --> develop (QA)
+1st done --> branch cut off
+2ns week started:
+QA --> UAT (UAT is closest status/condition of the PROD)
+ - Regression Suite (everyday)
+ - new feature testing
+Once we sign off from regression.
+After 2ns week:
+Release (UAT --> PROD). Done. SDLC/STLC
+Why fixVersion:
+2.70
+Two jobs:
+Devops - 2.70 (QA) --> UAT (branch cut off) 1st week
+Devops - 2.70 (UAT) --> PROD (release) after 2nd week

@@ -1,0 +1,69 @@
+SELENIUM GRID
+
+AWS EC2 ( ) -->> computer and database servers
+   * One server, another computer,
+   * EC2 (Amazon Elastic Compute Cloud)
+   * I am using the Ec2 machine means remote computer and doing paralel testing
+   * DevOps create a Ec2 (virtual) machine
+
+HUB it will be our main computer in Selenium Grid
+
+NODE, it will be our connected computer with hub
+
+
+        -->>     NODE
+
+  HUB   -->>     NODE
+
+        -->>     NODE
+
+
+ ec2 -> sign in the console -> services -> ec2
+ pcName -> Public DNS (IPv4)
+
+ To be able to find the username and password for remote desktop:
+  click connect -> take username:Administrator  and password:We need .pem file which we downloaded while creating the ec2 in aws website
+------------------------------
+
+1- We create the account in aws
+2- We create one ec2 machine
+     * 2016 windows t2.micro --> it is free
+     * key pair (pem file) --> this one help us to generate the password for my ec2 machine
+     * We download the microsoft remote desktop for ec2 machine connection.
+     * We use the Public DNS (IPv4) for connection. We get the DNS from aws ec2 website
+     * Username is Administrator and password generated with key pair pem file
+     * We open the security for Internet Explorer (Server Manager)
+     * We made local server + IE enhanced security configuration is off.
+     * We download the chrome and java We open the firewall for inbound and outbound rules.
+       We added new rules for the port and make all ports open to use
+3- We downloaded the selenium grid from selenium website.
+     * We need to navigate the location of jar file for grid
+     * We need to first launch the hub using following command java -jar nameofthejarfile.jar -role hub
+     * We need to launch the node and connect the node with hub using following command
+       java -jar nameofthejarfile.jar -role node -hub urlofthehub
+
+---------------------------------------------
+Selenium Grid
+ We need to download the jar file for selenium grid.
+ We need to create the hub using selenium grid then we need to create the node and connect with hub.
+
+  java -jar .\selenium-server-standalone-3.141.59.jar -role node -hub http://localhost:4444/grid/register/ -port 6666
+  java -jar selenium-server-standalone-3.141.59.jar -role node -hub http://localhost:4444/grid/register -port 5555
+
+  java -jar .\selenium-server-standalone-3.141.59.jar -role hub             //  http://localhost:4444/
+  java -jar .\selenium-server-standalone-3.141.59.jar -role hub -port 7777  // http://localhost:7777/
+
+
+  ctrl+C // exit your hub
+
+  ctrl + C  // both cmd and tun the following commands in order
+   1. powershell screen
+    java -jar .\selenium-server-standalone-3.141.59.jar -role hub
+   2. java -jar selenium-server-standalone-3.141.59.jar -role node -hub http://localhost:4444/grid/register -port 5555
+
+   How many test cases u have?
+   450 for Ui  -> 35 min in 4 different VM
+   450 for Api -> 30 min in 2 different VM
+
+   How we do paralel testing with Cucumber?
+   Yes we did paralel testing I did't setUp
