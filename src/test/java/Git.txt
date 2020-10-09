@@ -264,4 +264,79 @@ Commands:
  * git remote -v   -->> show me which version of my remoto repo
  * git reflog  -->> show what we have
 
- * git rm --cached <file name>  -->> if you want to untrack a single file ->
+ * git rm --cached <file name>  -->> if you want to untrack a single file -> dosyayi staging area dan local a geri alir
+ * git add .  -> add every file
+ * git log -> credentials
+ * git log --oneline
+ * git reset <idnumber> --hard -> delete everything inside folder
+ * git reset <idnumber> --soft -> staging area ya geri aliyor
+ * git commit --amend -m "message" -> mesaji bastan duzenler
+ * git commit --amend  -> bastan mesaji duzenler (push 'i' and click 'esc' ':' 'wq' )
+
+-------------------------
+  Branch
+git branch nameOfBranch -> create a branch
+git branch -a  -> show all branch
+git checkout nameOfBranch -> move this branch
+git checkout -b nameOfBranch -> hangi branch deysen onun ustune dal olusturuyor(branch olusturuyor)
+git branch -d nameOfBranch -> delete branch // If it is not working use -> git branch -D nameOfBranch
+git merge nameOfBranch -> we merge everything with current branch -> bunu yapmadan once birlestirmen gereken branch e ilerle                    sonra hangi branch i master ile birlestirmek istiyorsan onunla birlestir
+
+---------------
+
+git push origin master
+git remote -v
+
+--------------------
+
+git fetch origin -> bitbucket an local machine alir ama daha goremeyiz
+git branch -a    -> branch leri gosterir ve stage de aldigimiz dosyalari gosterir
+git merge origin/master -> stage deki dosyalari master a merge eder
+git pull origin master -> directly upload everything to local machine what we changed on bitbucket
+
+----------
+
+git config --global alias.st status -> git status command convert to git st
+
+-----------
+
+git checkout -- fileName  -> what we changed on the file we take back (siliyoruz)
+git diff -> we can see what we changed inside the file
+-------------------------------
+
+click->VCS -> enable version control integration
+click-> VCS -> git -> remote -> add link(bitbucket)
+
+
+
+
+stash changes - unstash changes  -->> we can see What we change and what is the differences between
+
+
+
+---------------------
+
+git log --oneline  -> yaptigimiz degisiklikleri goruyoruz ve id leri goruyoruz
+git add filename
+git commit -m"sff"
+git reset id --> commitledigimiz dosyayi geri aliyoruz| Kullanilmasi gerreken id numarasi commit mesajindan sonraki id  numarasi oluyor
+
+---------------------
+git add filename
+git reset  --> add ledigimiz herseyi geri aliyor
+
+-----------------
+
+Credentials manager a gidip git username and password can be uptade
+
+----------------
+
+
+
+
+Create branch at Intellij
+Make change inside created branch
+After push the code created branch
+Inside Github create Pull request from created branch to master branch
+And merge it
+lastly, inside intellij switch to master branch and run git pull and take from what change inside github
